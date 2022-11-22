@@ -3,21 +3,12 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "apps/ordering-microservices/src",
   "monorepo": true,
-  "root": "apps/ordering-microservices",
+  "root": "apps/orders",
   "compilerOptions": {
     "webpack": true,
     "tsConfigPath": "apps/ordering-microservices/tsconfig.app.json"
   },
   "projects": {
-    "ordering-microservices": {
-      "type": "application",
-      "root": "apps/ordering-microservices",
-      "entryFile": "main",
-      "sourceRoot": "apps/ordering-microservices/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/ordering-microservices/tsconfig.app.json"
-      }
-    },
     "orders": {
       "type": "application",
       "root": "apps/orders",
