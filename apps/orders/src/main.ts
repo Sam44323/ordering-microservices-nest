@@ -1,10 +1,12 @@
 import { ValidationPipe } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { OrdersModule } from './orders.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(OrdersModule);
-  app.useGlobalPipes(new ValidationPipe());
-  await app.listen(process.env.PORT);
+  app.useGlobalPipes(new ValidationPipe()); // using a pipe for class-transformers
+  const configService = app.get(ConfigService);
+  await app.listen(configService.get('PORT'));
 }
 bootstrap();
