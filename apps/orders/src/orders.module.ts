@@ -3,6 +3,7 @@ import * as Joi from 'joi';
 import { ConfigModule } from '@nestjs/config';
 import { OrdersController } from './orders.controller';
 import { OrdersService } from './orders.service';
+import { DatabaseModule } from '@app/common';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { OrdersService } from './orders.service';
       }),
       envFilePath: './apps/orders/.env',
     }),
+    DatabaseModule,
   ],
   controllers: [OrdersController],
   providers: [OrdersService],
