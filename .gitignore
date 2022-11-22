@@ -34,6 +34,10 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
+#environment
+.env
+.env.local
+
 #hashing
 .gpg
 ..gpg

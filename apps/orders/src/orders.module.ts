@@ -13,6 +13,7 @@ import { OrdersService } from './orders.service';
         MONGODB_URI: Joi.string().required(),
         PORT: Joi.number().required(),
       }),
+      envFilePath: './apps/orders/.env',
     }),
   ],
   controllers: [OrdersController],
