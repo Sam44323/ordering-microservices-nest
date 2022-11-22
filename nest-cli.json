@@ -6,7 +6,7 @@
   "root": "apps/orders",
   "compilerOptions": {
     "webpack": true,
-    "tsConfigPath": "apps/ordering-microservices/tsconfig.app.json"
+    "tsConfigPath": "apps/orders/tsconfig.app.json"
   },
   "projects": {
     "orders": {
