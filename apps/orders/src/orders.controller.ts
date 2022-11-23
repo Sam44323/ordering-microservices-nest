@@ -13,6 +13,6 @@ export class OrdersController {
 
   @Get('/orders')
   async getOrders() {
-    this.ordersService.getOrders();
+    return this.ordersService.getOrders();
   }
 }
